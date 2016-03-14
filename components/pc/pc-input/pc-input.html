@@ -1,0 +1,40 @@
+<link rel="import" href="/components/polymer/polymer.html">
+<dom-module id="pc-input">
+	<link rel="import" type="css" href="pc-input.css"/>
+
+	<template>
+		<input name="[[name]]" type="[[type]]" value="{{value::input}}" class$="{{_isEmpty(value)}}"></input>
+		<div id="floatingLabel">{{label}}</div>
+		<span class="material-input"></span>
+	</template>
+
+	<script>
+		Polymer({
+			is: "pc-input",
+			properties: {
+				name: String,
+				label: String,
+				type: {
+					type: String,
+					value: "text"
+				},
+				value: {
+					type: String,
+					value: "",
+					notify: true,
+				},
+				centered: {
+					type: Boolean,
+					value: false
+				}
+			},
+			ready: function() {
+				//when the floating label is clicked, focus on the input instead
+				$(this.$$('#floatingLabel')).on('click',function(){$(this.$$('input')).focus()}.bind(this));
+			},
+			_isEmpty(value) {
+				return (value == '')?'empty':'';
+			}
+		});
+	</script>
+</dom-module>

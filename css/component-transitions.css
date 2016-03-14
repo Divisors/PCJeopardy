@@ -1,0 +1,48 @@
+.transitions.in-fade-out.transitioning, .transitions.out-fade-out:not(.transitioning) {
+	animation: containerOut .5s both ease-in;
+}
+.transitions.in-fade-in:not(.transitioning) {
+	opacity: 0;
+}
+.transitions.in-fade-in.transitioning, .transitions.out-fade-in:not(.transitioning) {
+	animation: containerIn .25s both ease-in;
+}
+.transitions.in-slide-up.transitioning, .transitions.out-slide-up:not(.transitioning) {
+	animation: slideUp .5s both ease-in;
+}
+.transitions.in-slide-down.transitioning, .transitions.out-slide-down:not(.transitioning){
+	animation: slideDown .5s both ease-in;
+}
+@keyframes containerOut {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+		-webkit-transform: scale(.95);
+		transform: scale(.95);
+	}
+}
+/** TODO: finish (maybe slide up slightly)*/
+@keyframes containerIn {
+	from {
+		opacity: 0;
+		transform: scale(.95);
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes slideUp {
+	from {}
+	to {
+		transform: translateY(-100%);
+	}
+}
+@keyframes slideDown {
+	from {
+		transform: translateY(-100%);
+	}
+	to {
+	}
+}

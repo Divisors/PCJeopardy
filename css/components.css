@@ -1,0 +1,32 @@
+.page-header {
+	margin-left: 15px;
+    font-weight: 400;
+	font-size: 36px;
+	line-height: 1.1;
+	margin-bottom: 40px;
+	color: #333;
+}
+.container {
+	background-color: white;
+	box-shadow: 0 8px 17px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19);
+	box-sizing: border-box;
+	margin-bottom: 20px;
+	margin-left: 15px;
+	margin-right: 15px;
+	padding: 19px;
+}
+:host a {
+	color: #5252ff;
+	text-decoration: none;
+}
+:host a:hover {
+	text-decoration: underline;
+}
+:host[mobile] .container.container-big {
+	width: 100%;
+	border-radius: 0;
+	margin: 0;
+}
+:host[mobile] .page-header {
+	display: none;
+}

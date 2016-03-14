@@ -1,0 +1,23 @@
+<link rel="import" href="/components/polymer/polymer.html">
+<dom-module id="pc-loader">
+	<template>
+	</template>
+	<script>
+		Polymer({
+			is: 'pc-loader',
+			// Element Lifecycle
+			ready: function(e) {
+				var $this = $(this);
+				var toLoad = $this.attr('target');
+				if (toLoad.charAt(0)=='[')
+					toLoad = JSON.parse(toLoad);
+				ComponentLoader.instance
+					.require(toLoad)
+					.then(function() {
+						$this.trigger('load');
+					});
+				$(this).remove();
+			}
+		});
+	</script>
+</dom-module>

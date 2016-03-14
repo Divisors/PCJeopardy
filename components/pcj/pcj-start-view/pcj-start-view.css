@@ -1,0 +1,25 @@
+:host {
+	background-color: #009688;
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	color: white;
+	font-family: RobotoDraft, Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.form-group {
+	width: 20%;
+	margin: auto;
+	top: 50%;
+	position: relative;
+}
+pc-input {
+	--pc-bg-col: white;
+	--pc-input-big-label-font-color: white;
+	--pc-input-font: 36px;
+	--pc-input-big-label-font: 36px;
+	--pc-input-height: 52px;
+	--pc-input-small-label-font: 14px;
+}

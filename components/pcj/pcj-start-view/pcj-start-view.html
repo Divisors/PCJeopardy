@@ -1,0 +1,30 @@
+<link rel="import" href="/components/polymer/polymer.html"/>
+<pc-loader target='["pc-input","paper-button"]'></pc-loader>
+<dom-module id="pcj-start-view">
+	<link rel="import" type="css" href="pcj-start-view.css"/>
+	<link rel="import" type="css" href="/css/components.css"/>
+	<link rel="import" type="css" href="/css/component-transitions.css"/>
+	<template>
+		<div class="form-group">
+			<pc-input centered label="class name" type="text" name="classname" id="classnameInput"></pc-input>
+		</div>
+		<div class="form-group">
+			<paper-button raised>Join</paper-button>
+		</div>
+	</template>
+	<script>
+		Polymer({
+			is: 'pcj-start-view',
+			properties: {
+				mobile: {
+					type: Boolean,
+					readOnly: true,
+					reflectToAttribute: true
+				}
+			},
+			ready: function() {
+				
+			}
+		});
+	</script>
+</dom-module>
