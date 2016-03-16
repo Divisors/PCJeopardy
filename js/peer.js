@@ -15,10 +15,10 @@ window.RTCSessionDescription = window.RTCSessionDescription || window.mozRTCSess
 			console.log(e);
 		},
 		_onMessage: function(msg, uid) {
-			console.log(arguments);
+			console.log("Recieved message",arguments);
 		},
 		joinGame: function(game) {
-			
+			console.log("Joining game",game);
 		},
 		writeObject: function(object) {
 			
